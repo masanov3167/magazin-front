@@ -1,0 +1,286 @@
+.admin__wrapper{
+    display: flex;
+}
+
+.admin__main{
+    width: calc(100% - 270px);
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    margin-left: 270px;
+    box-shadow: 2px 2px 10px rgba(21, 20, 20, 0.5);
+    background: rgba(25, 30, 58, 0.96);
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.light .admin__main{
+    background: whitesmoke;
+    box-shadow: 0 0 5px rgb(215, 214, 214);
+}
+
+.light .category__item{
+    color: rgb(48, 42, 48);
+    background: rgba(213, 217, 229, 0.96);
+}
+
+.category__item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+    color: rgb(192, 178, 194);
+    background: rgba(45, 52, 82, 0.96);
+    border-radius: 10px;
+    margin: 5px 0;
+    padding: 5px 10px;
+}
+
+.category__item > div:first-child, .add_category__form > div:first-child{
+    width: 84%;
+}
+.category__item >div:last-child{
+    display: flex;
+}
+.category__item >div:last-child button,.category__item >div:last-child a, .add_category__form div:last-child button{
+   width: 25px;
+   height: 25px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.category__item > div > input, .add_category__form div > input{
+    display: block !important;
+    outline: none;
+    border: none;
+    color: inherit;
+    background: inherit;
+    border-bottom: 1px solid whitesmoke;
+    margin-bottom: 5px;
+    width: 100%;
+    height: 30px;
+    transition: all 1.5s ease-in-out;
+}
+.category__item >span{
+    white-space: nowrap; 
+  width: 84%; 
+  overflow: hidden;
+  text-overflow: ellipsis ellipsis; 
+}
+.add_category__form{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 15px;
+}
+
+.add_category__form div:last-child{
+    width: 15%;
+    display: flex;
+    justify-content: right;
+}
+.products__form{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.products__form__left{
+    display: flex;
+    flex-direction: column;
+}
+.products__form__left >input{
+    margin-bottom: 7px;
+}
+
+.dark .products__form__left >input, .dark .products__form__left > select{
+    color: rgb(192, 178, 194);
+    background: rgba(45, 52, 82, 0.96);
+    border: none;
+    outline: none !important;
+}
+.products__form__right{
+    margin-top: 10px;
+    display: flex;
+    justify-content: right;
+    margin-bottom: 20px;
+}
+.empty__category__wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.empty__category__wrapper > div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.admin__main__hero{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin__main .tox-statusbar__branding{
+    display: none;
+}
+
+.tox-tinymce{
+   border: none !important;
+   margin-top: 10px;
+}
+.tox-editor-container{
+    border-radius: 10px 10px 0 0;
+}
+
+.tox-statusbar__text-container{
+    display: none !important;
+}
+
+.edit__button__img{
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+}
+.cameraButton, .edit__camera__button {
+    display: inline-block;
+    margin: 1em 0;
+    padding: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    text-align: center;
+    border: 2px dashed rgb(209, 213, 186);
+  }
+  .edit__camera__button{
+    margin: 1em auto;
+    padding: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .edit__camera__button i{
+    position: absolute;
+    font-size: 60px;
+  }
+  
+  .cameraButton input[accept*="camera"], .edit__camera__button input[accept*="camera"] {
+    display: none;
+  }
+
+  .dark .cameraButton, .dark .edit__camera__button{
+    color: rgb(192, 178, 194);
+    background: rgba(45, 52, 82, 0.96);
+  }
+
+  .archive__checkbox{
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+  }
+
+  .medias__form{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+.medias__wrapper{
+    margin-top: 30px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+ .media__item{
+    margin-bottom: 20px;
+ }
+  .media__item div{
+    position: absolute;
+    margin: 5px 0 0 5px;
+    z-index: 1;
+    display: flex;
+  }
+  .media__item div button{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+  }
+  .media__item img, .media__item video{
+    width: 100%;
+    border-radius: 10px;
+  }
+
+@media only screen and (max-width: 800px){
+    .admin__main{
+        width: 100%;
+        margin-left: 0;
+    }
+    .category__item > div > input, .add_category__form div > input{
+        width: 90%;
+    }
+    .products__form__left >input::placeholder{
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .category__item > div > input, .add_category__form div > input{
+        width: 100%;
+    }
+    .category__item, .add_category__form{
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .category__item > div, .add_category__form div{
+        width: 100% !important;
+        margin: 5px 0;
+    }
+    .add_category__form div:last-child{
+        width: 100%;
+        display: flex;
+        justify-content: right;
+    }
+    .admin__main__hero{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .admin__main__hero >h3{
+        font-size: 15px;
+        font-weight: 800;
+    }
+    .admin__main__hero > button{
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .category__item >span{
+        white-space: nowrap; 
+      width: 100%; 
+      overflow: hidden;
+      text-overflow: ellipsis ellipsis; 
+    }
+    .products__form__left >input::placeholder{
+        font-size: 12px;
+    }
+}

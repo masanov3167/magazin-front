@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@keyframes slide-up {
+  0%, 33% { transform: translateY(1rem); }
+	66.5% { transform: translateY(-2rem); }
+	77.3% { transform: translateY(1.25rem); }
+	86.2% { transform: translateY(-0.75rem); }
+	96% { transform: translateY(0.25rem); }
+	100% { transform: translateY(0); }
+}
+.dark{
+  color: #888ea8;
+  min-height: 100%;
+  height: auto;
+  font-size: 0.875rem;
+  background: #060818;
+  background: linear-gradient(135deg,rgb(21, 20, 21) 0%,rgb(20, 19, 19) 100%) !important;
+}
+
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6, .dark span, .dark p{
+  color: #e0e6ed;
+}
+
+.light header{
+  /* background: linear-gradient(135deg,rgb(250, 242, 242) 0%,rgb(225, 226, 222) 100%) !important; */
+  background: whitesmoke;
+  box-shadow: 0 0 5px rgb(215, 214, 214);
+}
+
+.light{
+  color: #50525b;
+  min-height: 100%;
+  height: auto;
+  font-size: 0.875rem;
+  /* background: linear-gradient(135deg,rgb(245, 236, 243) 0%,rgb(253, 245, 245) 100%) !important; */
+  background: white;
+}
+
+.light h1, .light h2, .light h3, .light h4, .light h5, .light h6, .light span, .light p{
+  color: #3b3f5c;
+}
+
+.loading__wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.loading__container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.loading__text {
+  color: #fbae17;
+  display: inline-block;
+  margin-left: 5px;
+}
+.loading__ball {
+  position: relative;
+  display: inline-block;
+  height: 37px;
+  width: 15px;
+}
+.loading__ball:before {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #fbae17;
+  transform-origin: 50%;
+  animation: bounce 500ms alternate infinite ease;
+}
+@keyframes bounce {
+  0% {
+    top: 30px;
+    height: 5px;
+    border-radius: 60px 60px 20px 20px;
+    transform: scaleX(2);
+ }
+  35% {
+    height: 15px;
+    border-radius: 50%;
+    transform: scaleX(1);
+ }
+  100% {
+    top: 0;
+ }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.loader__wrapper{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader{
+  height: 100px;
+  width: 20%;
+  text-align: center;
+  padding: 1em;
+  display: inline-block;
+}
+
+.loader svg path,
+.loader svg rect{
+  fill: #FF6700;
+}

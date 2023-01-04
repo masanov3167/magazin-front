@@ -1,0 +1,199 @@
+@keyframes openContent {
+  from {
+      opacity: 0;
+      transform: scale(0.5);
+      margin-top: 0;
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+      margin-top: 143px;
+  }
+}
+@keyframes openCard {
+  from {
+      opacity: 0;
+      transform: scale(0.7);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+@keyframes wiggle{
+  0%{transform: scale(1.1);}
+  10%{transform: rotate(10deg);}
+  20%{transform: rotate(20deg);}
+  30%{transform: rotate(10deg);}
+  40%{transform: rotate(0deg);}
+  50%{transform: rotate(-10deg);}
+  60%{transform: rotate(-20deg);}
+  70%{transform: rotate(10deg);}
+  83%{transform: rotate(0deg);}
+  90%{transform: translate(0);}
+  100%{transform: scale(1);}
+}
+
+:root {
+    --togleBgDark:  linear-gradient(135deg,rgb(86, 85, 85) 0%,rgb(80, 58, 58) 100%);
+    --togleBgLight: linear-gradient(135deg,rgb(249, 244, 244) 0%,rgb(231, 220, 220) 100%);
+    --togleHoverLight: linear-gradient(135deg,rgb(224, 210, 210) 0%,rgb(250, 240, 240) 100%);
+    --togleHoverDark: linear-gradient(135deg,rgb(63, 62, 62) 0%,rgb(44, 37, 37) 100%);
+  }
+  
+  body{
+    transition: all .5s ease-in-out;
+  }
+  
+  .mode__icon{
+    /* transition: all 0.5s ease-in-out; */
+    font-size: 20px;
+  }
+  
+.header{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 18px;
+    position: sticky;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(25, 30, 58, 0.96);
+    -webkit-backdrop-filter: saturate(200%) blur(6px);
+    backdrop-filter: saturate(200%) blur(6px);
+    box-shadow: 18px 20px 10.3px -23px rgba(0, 0, 0, 0.15);
+    z-index: 3;
+    margin-bottom: 25px;
+    transition: all 0.5s ease-in-out;
+}
+
+.form__search{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+.search__input{
+    width: 100%;
+    outline: none;
+    border: none;
+    background: inherit;
+}
+
+
+.header__nav{
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header__nav__item{
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+}
+.header__nav__item >img{
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.header__nav__item:last-child{
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.lang__wrapper{
+  width: 45px;
+  height: auto;
+  padding: 7px 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  margin-top: 145px;
+  background: var(--togleBgDark) !important;
+  animation-name: openContent;
+  animation-duration: .5s;
+}
+.light .lang__wrapper{
+  background: var(--togleBgLight) !important;
+}
+
+.lang__wrapper span{
+  width: 35px;
+  text-align: center;
+  font-weight: 800;
+}
+.light .lang__wrapper span:hover{
+  background: var(--togleHoverLight) !important;
+}
+
+.lang__wrapper span:hover{
+  height: auto;
+  border-radius: 5px;
+  background: var(--togleHoverDark) !important;
+  opacity: 0.8;
+}
+
+
+.header__avatar__item{
+    position: absolute;
+    border-radius: 10px;
+    margin-top: 55px;
+    margin-right: -10px;
+    background: var(--togleBgDark);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 45);
+    padding: 10px;
+    z-index: 5;
+    animation-name: openCard;
+    animation-duration: .5s;
+}
+
+.light .header__avatar__item{
+  background: var(--togleBgLight) !important;
+}
+.header__avatar__item > div{
+    margin: 10px 0;
+}
+.header__avatar__item > div > a, .header__avatar__item > div:last-child{
+    text-decoration: none;
+    display: flex;
+    border-radius: 15px;
+    padding: 5px;
+}
+.header__avatar__item > div > a:hover, .header__avatar__item > div:last-child:hover{
+    background: var(--togleHoverDark) !important;
+}
+
+.light .header__avatar__item > div > a:hover, .light .header__avatar__item > div:last-child:hover{
+  background: var(--togleHoverLight) !important;
+}
+
+.header__avatar__item > div > a > svg, .header__avatar__item > div:last-child > svg{
+    color: #bfc9d4;
+    stroke-width: 1.5;
+}
+.header__avatar__item > div > a > span, .header__avatar__item > div:last-child > span{
+    display: block;
+    margin-left: 10px;
+}
+
+.mode__icon__wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-link{
+  animation: wiggle 1s infinite;
+}

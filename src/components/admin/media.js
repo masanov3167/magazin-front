@@ -214,7 +214,7 @@ const AdminMediasPage = () => {
                           <label className="edit__camera__button">
                                 <span>Media joylash uchun bosing +</span>
                               
-                                <input className={`form-control media_pic`} type="file" accept="image/*;video/*;capture=camera"/>
+                                <input className={`form-control media_pic`} type="file" accept="image/*,video/*" capture='user' />
                           </label>
                           <button onClick={HandleProductAdd} className="btn btn-info me-2" type="submit"><i className="fa-solid fa-check"></i></button>
                           <button className="btn btn-danger" onClick={() => setAdd(false)}><i className="fa-solid fa-xmark"></i></button>

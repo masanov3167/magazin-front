@@ -261,6 +261,7 @@ const UserResponseHandler = (res, index) =>{
 
   const HandleProductAdd = () =>{
     const productPic = document.querySelector('.product_pic').files[0];
+    console.log(productPic);
     if(!productPic){
       alert('rasmini yuklang');
       return
@@ -351,13 +352,14 @@ const UserResponseHandler = (res, index) =>{
                           <label className="edit__camera__button">
                               {
                                 editedImg.loaded && editedImg.pic ? (
-                                  <i className="fa-solid fa-square-pen"></i>
+                                  <i style={{zIndex:'1'}} className="fa-solid fa-square-pen"></i>
                                 ):(
                                   <span>Mahsulot qo'shish uchun bosing</span>
                                 )
                               }
                               
                             <img className="edit__button__img" src={editedImg.loaded && editedImg.pic ? editedImg.pic : ''} alt="" />
+                            {/* <video className="edit__button__img" controls autoPlay src={editedImg.loaded && editedImg.pic ? editedImg.pic : ''}></video> */}
                                 <input onChange={e => setEditedIMg({loaded:true, pic:window.URL.createObjectURL(e.target.files[0])})} className={`form-control product_pic`} type="file" accept="image/*;capture=camera"/>
                           </label>
                           <input type="text" className='form-control name_uz' required placeholder={about[lang].name_uz}/>

@@ -11,8 +11,8 @@ const TokenProvider = ({ children }) => {
     const [lang, setLang] =useState(JSON.parse(window.localStorage.getItem("lang")) || defaultlang)
     const [modalDisplay, setModalDisplay] = useState(false);
     const [show, setShow] = useState(false)
-    const link = 'https://shop-2naa.onrender.com';
-    // const link = 'http://localhost:9000';
+    // const link = 'https://shop-2naa.onrender.com';
+    const link = 'http://localhost:9000';
     const fetchHeaders = {
         'Content-type':"application/json",
         'token':token
